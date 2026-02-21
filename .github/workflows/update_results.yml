@@ -3,8 +3,7 @@ name: Update Results
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0' # runs every Sunday at midnight
-
+      - cron: '0 * * * *'  # This means "at minute 0 of every hour"
 jobs:
     update-results:
         runs-on: ubuntu-latest
